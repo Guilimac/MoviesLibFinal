@@ -29,6 +29,9 @@ class MovieRegisterViewController: UIViewController {
             tfRating.text = "\(movie.rating)"
             tfDuration.text = movie.duration
             tvSummary.text = movie.summary
+            if let image = movie.poster as? UIImage{
+                ivPoster.image = image
+            }
         }
     }
     
@@ -103,9 +106,7 @@ class MovieRegisterViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         if movie != nil {
             
-            if let image = movie.poster as? UIImage{
-                ivPoster.image = image
-            }
+            
             if let categories = movie.categories{
                 if categories.count > 0 {
                     lbCategories.text = categories.map({($0 as! Category).name!}).joined(separator:" | ")

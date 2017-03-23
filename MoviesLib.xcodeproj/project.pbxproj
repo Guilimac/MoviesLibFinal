@@ -52,6 +52,7 @@
 		AC70C4F81E743C94005E598A /* TheaterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */; };
 		AC70C4FC1E747752005E598A /* fiap.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AC70C4FB1E747752005E598A /* fiap.gpx */; };
 		AC70C4FE1E748175005E598A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4FD1E748175005E598A /* WebViewController.swift */; };
+		ACA98F3A1E835D9C003FF8D7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -102,6 +103,7 @@
 		AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterAnnotation.swift; sourceTree = "<group>"; };
 		AC70C4FB1E747752005E598A /* fiap.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fiap.gpx; sourceTree = "<group>"; };
 		AC70C4FD1E748175005E598A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				07780D531E6D860E00BC3630 /* Assets.xcassets */,
 				07780D551E6D860E00BC3630 /* LaunchScreen.storyboard */,
 				07780D581E6D860E00BC3630 /* Info.plist */,
+				ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */,
 			);
 			path = MoviesLib;
 			sourceTree = "<group>";
@@ -326,6 +329,7 @@
 				AC70C4F61E742784005E598A /* Theater.swift in Sources */,
 				07780D4F1E6D860E00BC3630 /* MovieViewController.swift in Sources */,
 				AC64CEF11E70CA2400FD5EFF /* MovieOld.swift in Sources */,
+				ACA98F3A1E835D9C003FF8D7 /* SettingsViewController.swift in Sources */,
 				AC264C1D1E7CABAE00F083F1 /* UIViewController+CoreData.swift in Sources */,
 				07780D4D1E6D860E00BC3630 /* AppDelegate.swift in Sources */,
 				AC70C4F11E74225E005E598A /* TheatersMapViewController.swift in Sources */,
