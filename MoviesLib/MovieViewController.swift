@@ -48,6 +48,9 @@ class MovieViewController: UIViewController {
         lbDuration.text = movie.duration
         lbScore.text = "⭐️ \(movie.rating)/10"
         tvSinopsis.text = movie.summary
+        if let image = movie.poster as? UIImage{
+            ivPoster.image = image
+        }
         if let categories = movie.categories{
             lbGenre.text = categories.map({($0 as! Category).name!}).joined(separator:" | ")
         }
