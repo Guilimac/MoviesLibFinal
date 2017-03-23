@@ -22,14 +22,12 @@ class MovieRegisterViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         if movie != nil {
+            
             tfTitle.text = movie.title
             tfRating.text = "\(movie.rating)"
             tfDuration.text = movie.duration
             tvSummary.text = movie.summary
-            
-            btAddUpdate.setTitle("Atualizar", for: .normal)
         }
     }
     
@@ -64,6 +62,23 @@ class MovieRegisterViewController: UIViewController {
         }
         
         close(nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        if movie != nil {
+            
+            
+            if let categories = movie.categories{
+                if categories.count > 0 {
+                    lbCategories.text = categories.map({($0 as! Category).name!}).joined(separator:" | ")
+                }else{
+                    lbCategories.text = "Categorias"
+                }
+            }
+            
+            
+            btAddUpdate.setTitle("Atualizar", for: .normal)
+        }
     }
     
     

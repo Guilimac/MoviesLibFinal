@@ -27,12 +27,6 @@ class MovieViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //ivPoster.image = UIImage(named: movie.imageWide)
-        lbTitle.text = movie.title
-        //lbGenre.text = movie.categoriesDescription
-        lbDuration.text = movie.duration
-        lbScore.text = "⭐️ \(movie.rating)/10"
-        tvSinopsis.text = movie.summary
         
     }
 
@@ -44,6 +38,21 @@ class MovieViewController: UIViewController {
         if let vc = segue.destination as? MovieRegisterViewController {
             vc.movie = movie
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //ivPoster.image = UIImage(named: movie.imageWide)
+        lbTitle.text = movie.title
+        //lbGenre.text = movie.categoriesDescription
+        lbDuration.text = movie.duration
+        lbScore.text = "⭐️ \(movie.rating)/10"
+        tvSinopsis.text = movie.summary
+        if let categories = movie.categories{
+            lbGenre.text = categories.map({($0 as! Category).name!}).joined(separator:" | ")
+        }
+        
+        
     }
     
     
