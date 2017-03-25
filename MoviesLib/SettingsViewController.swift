@@ -51,6 +51,7 @@ class SettingsViewController: UIViewController {
                 }
             })
         }
+        //picker.selectedRow(inComponent: 0)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -80,6 +81,9 @@ extension SettingsViewController: UITextFieldDelegate {
 extension SettingsViewController: UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return dataSource[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        print("Acabaram de comer",dataSource[row])
     }
     
 }
