@@ -186,19 +186,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-bd-cAJ">
-                                <rect key="frame" x="0.0" y="157" width="320" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="O que vc ira comer?" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4xy-fT-g0D">
+                                <rect key="frame" x="16" y="151" width="288" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="ahP-p1-4nU"/>
                     <connections>
                         <outlet property="ivBackgroud" destination="VaB-7W-sYa" id="AoD-1Y-YfY"/>
-                        <outlet property="picker" destination="hbn-bd-cAJ" id="1Kr-VZ-l5m"/>
                         <outlet property="scColorScheme" destination="91L-d3-3i3" id="zSX-Ih-1kw"/>
                         <outlet property="swAutoPlay" destination="Hns-pr-xW1" id="awM-OO-91J"/>
+                        <outlet property="tfFood" destination="4xy-fT-g0D" id="Td8-hZ-tgS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VJx-iw-Qc2" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -20,16 +20,19 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var swAutoPlay: UISwitch!
     
     @IBOutlet weak var ivBackgroud: UIImageView!
-    @IBOutlet weak var picker: UIPickerView!
+    @IBOutlet weak var tfFood: UITextField!
     
     
-    var motionManager = CMMotionManager()
-    var dataSource = [
-        "Arroz",
-        "Feijào",
-        "Ovo",
-        "Peixe"
+    var picker: UIPickerView!
+
+    var dataSource = ["Arroz",
+                      "Feijào",
+                      "Ovo",
+                      "Peixe"
     ]
+        var motionManager = CMMotionManager()
+    @IBOutlet weak var tfComida: UITextField!
+    
     
     override var canBecomeFirstResponder: Bool {
         return true
@@ -38,9 +41,19 @@ class SettingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        picker = UIPickerView()
+        picker.backgroundColor = .white
         picker.delegate = self
         picker.dataSource = self
+        tfFood.inputView = picker
         
+        let toolBack = UIToolbar(frame: CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: 44))
+        let btCancel = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancel))
+        let btDone = UIBarButtonItem(barButtonSystemItem: .done, target: self, action: #selector(done))
+        let space = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        toolBack.items = [btCancel,space,btDone]
+        tfFood.inputAccessoryView = toolBack
         if motionManager.isDeviceMotionAvailable{
             motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (data: CMDeviceMotion?, error: Error?) in
                 if error != nil{
@@ -70,6 +83,13 @@ class SettingsViewController: UIViewController {
         scColorScheme.selectedSegmentIndex = UserDefaults.standard.integer(forKey: SettingTypes.coloScheme.rawValue)
         swAutoPlay.setOn(UserDefaults.standard.bool(forKey: SettingTypes.autoPlay.rawValue), animated: false)
         
+    }
+    func cancel(){
+        tfFood.resignFirstResponder()
+    }
+    func done(){
+        tfFood.text = dataSource[ picker.selectedRow(inComponent: 0)]
+        cancel()
     }
 }
 
