@@ -149,7 +149,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alfa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-7W-sYa">
+                            <imageView userInteractionEnabled="NO" alpha="0.10000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alfa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-7W-sYa">
                                 <rect key="frame" x="-144" y="-100" width="642" height="765"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -186,12 +186,17 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hbn-bd-cAJ">
+                                <rect key="frame" x="0.0" y="157" width="320" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="ahP-p1-4nU"/>
                     <connections>
                         <outlet property="ivBackgroud" destination="VaB-7W-sYa" id="AoD-1Y-YfY"/>
+                        <outlet property="picker" destination="hbn-bd-cAJ" id="1Kr-VZ-l5m"/>
                         <outlet property="scColorScheme" destination="91L-d3-3i3" id="zSX-Ih-1kw"/>
                         <outlet property="swAutoPlay" destination="Hns-pr-xW1" id="awM-OO-91J"/>
                     </connections>

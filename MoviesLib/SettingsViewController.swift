@@ -20,7 +20,16 @@ class SettingsViewController: UIViewController {
     @IBOutlet weak var swAutoPlay: UISwitch!
     
     @IBOutlet weak var ivBackgroud: UIImageView!
-    var motionManager: CMMotionManager!
+    @IBOutlet weak var picker: UIPickerView!
+    
+    
+    var motionManager = CMMotionManager()
+    var dataSource = [
+        "Arroz",
+        "Feijào",
+        "Ovo",
+        "Peixe"
+    ]
     
     override var canBecomeFirstResponder: Bool {
         return true
@@ -28,6 +37,9 @@ class SettingsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        picker.delegate = self
+        picker.dataSource = self
         
         if motionManager.isDeviceMotionAvailable{
             motionManager.startDeviceMotionUpdates(to: OperationQueue.main, withHandler: { (data: CMDeviceMotion?, error: Error?) in
@@ -62,6 +74,21 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController: UITextFieldDelegate {
     func textFieldDidEndEditing(_ textField: UITextField) {
+    }
+}
+
+extension SettingsViewController: UIPickerViewDelegate{
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return dataSource[row]
+    }
+    
+}
+extension SettingsViewController: UIPickerViewDataSource{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return dataSource.count
     }
 }
 
