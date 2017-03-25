@@ -8,11 +8,13 @@
 
 import UIKit
 import CoreData
+import AVFoundation
 
 class MoviesTableViewController: UITableViewController {
 
     var fetchedResultController: NSFetchedResultsController<Movie>!
     var label: UILabel!
+    var backgroudPlayer: AVAudioPlayer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +33,7 @@ class MoviesTableViewController: UITableViewController {
         label.textColor = .white
         
         loadMovies()
+        prepareMusci()
     }
 
     override func didReceiveMemoryWarning() {
@@ -86,11 +89,9 @@ class MoviesTableViewController: UITableViewController {
         cell.lbRating.text = "\(movie.rating)"
         cell.lbTitle.text = movie.title
         cell.lbSummary.text = movie.summary
-        
-        if let image = movie.poster as? UIImage{
+        if let image = movie.poster as? UIImage {
             cell.ivPoster.image = image
         }
-        
         return cell
     }
 
@@ -113,6 +114,21 @@ class MoviesTableViewController: UITableViewController {
                 print(error.localizedDescription)
             }
         }
+    }
+    
+    func prepareMusci(){
+        let url = Bundle.main.url(forResource: "music", withExtension: "mp3")!
+        backgroudPlayer = try! AVAudioPlayer(contentsOf: url)
+        backgroudPlayer.volume = 0.2
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroudPlayer.play()
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        backgroudPlayer.stop()
     }
 
     /*

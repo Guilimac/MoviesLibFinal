@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AVFoundation
+import AVKit
 
 class MovieViewController: UIViewController {
 
@@ -18,15 +20,52 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var lbScore: UILabel!
     @IBOutlet weak var tvSinopsis: UITextView!
     @IBOutlet weak var lcButtonX: NSLayoutConstraint!
+    @IBOutlet weak var viTrailler: UIView!
     
     // MARK: Properties
     var movie: Movie!
+    var moviePlayer: AVPlayer!
+    var moviePlayerController: AVPlayerViewController!
+    
     
     
     // MARK: Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        prepareVideo()
+        if UserDefaults.standard.bool(forKey: SettingTypes.autoPlay.rawValue){
+            changeMovieeStatus(play: true)
+            
+        }else{
+            let old = ivPoster.frame.height
+            ivPoster.frame.size.height = 0
+            UIView.animate(withDuration: 0.75, delay: 0, options: .curveEaseInOut, animations: { 
+                self.ivPoster.frame.size.height = old
+            }, completion: { (success: Bool) in
+                print("fim da animação")
+            })
+            
+        }
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        //ivPoster.image = UIImage(named: movie.imageWide)
+        lbTitle.text = movie.title
+        lbDuration.text = movie.duration
+        lbScore.text = "⭐️ \(movie.rating)/10"
+        if let categories = movie.categories {
+            lbGenre.text = categories.map({($0 as! Category).name!}).joined(separator: " | ")
+        }
+        if let image = movie.poster as? UIImage {
+            ivPoster.image = image
+        }
+        tvSinopsis.text = movie.summary
+    }
+    @IBAction func playVideo(_ sender: UIButton) {
+        sender.isHidden = true
+        changeMovieeStatus(play: true)
         
     }
 
@@ -39,29 +78,29 @@ class MovieViewController: UIViewController {
             vc.movie = movie
         }
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        //ivPoster.image = UIImage(named: movie.imageWide)
-        lbTitle.text = movie.title
-        //lbGenre.text = movie.categoriesDescription
-        lbDuration.text = movie.duration
-        lbScore.text = "⭐️ \(movie.rating)/10"
-        tvSinopsis.text = movie.summary
-        if let image = movie.poster as? UIImage{
-            ivPoster.image = image
-        }
-        if let categories = movie.categories{
-            lbGenre.text = categories.map({($0 as! Category).name!}).joined(separator:" | ")
-        }
-        
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        changeMovieeStatus(play: false)
         
     }
-    
-    
-    
-    
-    
-    
+
+    func prepareVideo(){
+        let url = URL(string: "http://goo.gl/8XmNn8")!
+        moviePlayer = AVPlayer(url: url)
+        moviePlayerController = AVPlayerViewController()
+        moviePlayerController.player = moviePlayer
+        moviePlayerController.showsPlaybackControls = true
+        moviePlayerController.view.frame = viTrailler.bounds
+        viTrailler.addSubview(moviePlayerController.view)
+        
+    }
+    func changeMovieeStatus(play:Bool){
+        viTrailler.isHidden=false
+        if play{
+        moviePlayer.play()
+        }else{
+            moviePlayer.pause()
+        }
+    }
     
 }

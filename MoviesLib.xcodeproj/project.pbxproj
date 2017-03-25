@@ -16,6 +16,8 @@
 		AC264C1B1E7CA30200F083F1 /* MoviesLib.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AC264C191E7CA30200F083F1 /* MoviesLib.xcdatamodeld */; };
 		AC264C1D1E7CABAE00F083F1 /* UIViewController+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC264C1C1E7CABAD00F083F1 /* UIViewController+CoreData.swift */; };
 		AC264C1F1E7CBEB300F083F1 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC264C1E1E7CBEB300F083F1 /* CategoriesViewController.swift */; };
+		AC3098B11E85E74F00C0BC7D /* logan-trailer.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AC3098AF1E85E74F00C0BC7D /* logan-trailer.mp4 */; };
+		AC3098B21E85E74F00C0BC7D /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AC3098B01E85E74F00C0BC7D /* music.mp3 */; };
 		AC64CE811E70BCAA00FD5EFF /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64CE801E70BCAA00FD5EFF /* MoviesTableViewController.swift */; };
 		AC64CE831E70C8C600FD5EFF /* movies.json in Resources */ = {isa = PBXBuildFile; fileRef = AC64CE821E70C8C600FD5EFF /* movies.json */; };
 		AC64CED51E70C98E00FD5EFF /* arrival-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC64CEBB1E70C98E00FD5EFF /* arrival-small.jpg */; };
@@ -46,13 +48,14 @@
 		AC64CEEE1E70C98E00FD5EFF /* sully-wide.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC64CED41E70C98E00FD5EFF /* sully-wide.jpg */; };
 		AC64CEF11E70CA2400FD5EFF /* MovieOld.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64CEF01E70CA2400FD5EFF /* MovieOld.swift */; };
 		AC64CEF31E70DA9E00FD5EFF /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC64CEF21E70DA9E00FD5EFF /* MovieTableViewCell.swift */; };
+		AC66B47D1E835D9B00C8D5F9 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC66B47C1E835D9B00C8D5F9 /* SettingsViewController.swift */; };
+		AC66B47F1E8361A000C8D5F9 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = AC66B47E1E8361A000C8D5F9 /* Settings.bundle */; };
 		AC70C4EF1E741D3A005E598A /* theaters.xml in Resources */ = {isa = PBXBuildFile; fileRef = AC70C4EE1E741D3A005E598A /* theaters.xml */; };
 		AC70C4F11E74225E005E598A /* TheatersMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4F01E74225E005E598A /* TheatersMapViewController.swift */; };
 		AC70C4F61E742784005E598A /* Theater.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4F51E742784005E598A /* Theater.swift */; };
 		AC70C4F81E743C94005E598A /* TheaterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */; };
 		AC70C4FC1E747752005E598A /* fiap.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AC70C4FB1E747752005E598A /* fiap.gpx */; };
 		AC70C4FE1E748175005E598A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4FD1E748175005E598A /* WebViewController.swift */; };
-		ACA98F3A1E835D9C003FF8D7 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +70,8 @@
 		AC264C1A1E7CA30200F083F1 /* MoviesLib.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MoviesLib.xcdatamodel; sourceTree = "<group>"; };
 		AC264C1C1E7CABAD00F083F1 /* UIViewController+CoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+CoreData.swift"; sourceTree = "<group>"; };
 		AC264C1E1E7CBEB300F083F1 /* CategoriesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
+		AC3098AF1E85E74F00C0BC7D /* logan-trailer.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "logan-trailer.mp4"; sourceTree = "<group>"; };
+		AC3098B01E85E74F00C0BC7D /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		AC64CE801E70BCAA00FD5EFF /* MoviesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 		AC64CE821E70C8C600FD5EFF /* movies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = movies.json; sourceTree = "<group>"; };
 		AC64CEBB1E70C98E00FD5EFF /* arrival-small.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "arrival-small.jpg"; sourceTree = "<group>"; };
@@ -97,13 +102,14 @@
 		AC64CED41E70C98E00FD5EFF /* sully-wide.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "sully-wide.jpg"; sourceTree = "<group>"; };
 		AC64CEF01E70CA2400FD5EFF /* MovieOld.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieOld.swift; sourceTree = "<group>"; };
 		AC64CEF21E70DA9E00FD5EFF /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		AC66B47C1E835D9B00C8D5F9 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		AC66B47E1E8361A000C8D5F9 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		AC70C4EE1E741D3A005E598A /* theaters.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = theaters.xml; sourceTree = "<group>"; };
 		AC70C4F01E74225E005E598A /* TheatersMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheatersMapViewController.swift; sourceTree = "<group>"; };
 		AC70C4F51E742784005E598A /* Theater.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theater.swift; sourceTree = "<group>"; };
 		AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterAnnotation.swift; sourceTree = "<group>"; };
 		AC70C4FB1E747752005E598A /* fiap.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fiap.gpx; sourceTree = "<group>"; };
 		AC70C4FD1E748175005E598A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,19 +143,22 @@
 		07780D4B1E6D860E00BC3630 /* MoviesLib */ = {
 			isa = PBXGroup;
 			children = (
-				07780D4C1E6D860E00BC3630 /* AppDelegate.swift */,
-				AC264C1C1E7CABAD00F083F1 /* UIViewController+CoreData.swift */,
-				AC264C191E7CA30200F083F1 /* MoviesLib.xcdatamodeld */,
+				AC3098AF1E85E74F00C0BC7D /* logan-trailer.mp4 */,
+				AC3098B01E85E74F00C0BC7D /* music.mp3 */,
 				AC64CEEF1E70C99900FD5EFF /* images */,
 				AC70C4F41E74236C005E598A /* data */,
 				AC70C4F21E7422FE005E598A /* Movie */,
 				AC70C4F31E742306005E598A /* Theater */,
-				07780D501E6D860E00BC3630 /* Main.storyboard */,
+				07780D4C1E6D860E00BC3630 /* AppDelegate.swift */,
+				AC264C1C1E7CABAD00F083F1 /* UIViewController+CoreData.swift */,
 				AC264C1E1E7CBEB300F083F1 /* CategoriesViewController.swift */,
+				AC66B47C1E835D9B00C8D5F9 /* SettingsViewController.swift */,
+				07780D501E6D860E00BC3630 /* Main.storyboard */,
+				AC66B47E1E8361A000C8D5F9 /* Settings.bundle */,
+				AC264C191E7CA30200F083F1 /* MoviesLib.xcdatamodeld */,
 				07780D531E6D860E00BC3630 /* Assets.xcassets */,
 				07780D551E6D860E00BC3630 /* LaunchScreen.storyboard */,
 				07780D581E6D860E00BC3630 /* Info.plist */,
-				ACA98F391E835D9B003FF8D7 /* SettingsViewController.swift */,
 			);
 			path = MoviesLib;
 			sourceTree = "<group>";
@@ -283,6 +292,7 @@
 				07780D571E6D860E00BC3630 /* LaunchScreen.storyboard in Resources */,
 				AC64CEE21E70C98E00FD5EFF /* kongskull-wide.jpg in Resources */,
 				AC64CEDB1E70C98E00FD5EFF /* civilwar-small.jpg in Resources */,
+				AC3098B21E85E74F00C0BC7D /* music.mp3 in Resources */,
 				AC70C4FC1E747752005E598A /* fiap.gpx in Resources */,
 				AC64CEE81E70C98E00FD5EFF /* madmax-wide.jpg in Resources */,
 				AC64CEE71E70C98E00FD5EFF /* madmax-small.jpg in Resources */,
@@ -297,6 +307,7 @@
 				AC64CE831E70C8C600FD5EFF /* movies.json in Resources */,
 				AC64CEDA1E70C98E00FD5EFF /* batmanvsuperman-wide.jpg in Resources */,
 				AC64CEE91E70C98E00FD5EFF /* rogueone-small.jpg in Resources */,
+				AC3098B11E85E74F00C0BC7D /* logan-trailer.mp4 in Resources */,
 				AC64CEDC1E70C98E00FD5EFF /* civilwar-wide.jpg in Resources */,
 				AC64CEE01E70C98E00FD5EFF /* doctorstrange-wide.jpg in Resources */,
 				AC70C4EF1E741D3A005E598A /* theaters.xml in Resources */,
@@ -309,6 +320,7 @@
 				AC64CED61E70C98E00FD5EFF /* arrival-wide.jpg in Resources */,
 				AC64CEE61E70C98E00FD5EFF /* logan-wide.jpg in Resources */,
 				AC64CEEA1E70C98E00FD5EFF /* rogueone-wide.jpg in Resources */,
+				AC66B47F1E8361A000C8D5F9 /* Settings.bundle in Resources */,
 				AC64CED51E70C98E00FD5EFF /* arrival-small.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -329,7 +341,7 @@
 				AC70C4F61E742784005E598A /* Theater.swift in Sources */,
 				07780D4F1E6D860E00BC3630 /* MovieViewController.swift in Sources */,
 				AC64CEF11E70CA2400FD5EFF /* MovieOld.swift in Sources */,
-				ACA98F3A1E835D9C003FF8D7 /* SettingsViewController.swift in Sources */,
+				AC66B47D1E835D9B00C8D5F9 /* SettingsViewController.swift in Sources */,
 				AC264C1D1E7CABAE00F083F1 /* UIViewController+CoreData.swift in Sources */,
 				07780D4D1E6D860E00BC3630 /* AppDelegate.swift in Sources */,
 				AC70C4F11E74225E005E598A /* TheatersMapViewController.swift in Sources */,
