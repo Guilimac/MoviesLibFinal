@@ -28,7 +28,7 @@
                                 <rect key="frame" x="0.0" y="28" width="320" height="106"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OjP-H8-j4Z" id="hvD-oc-XvP">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="105"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="106"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="EsG-yv-GEw">
@@ -149,6 +149,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="alfa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="VaB-7W-sYa">
+                                <rect key="frame" x="-144" y="-100" width="642" height="765"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="91L-d3-3i3">
                                 <rect key="frame" x="16" y="57" width="288" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -187,6 +191,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="settings" id="ahP-p1-4nU"/>
                     <connections>
+                        <outlet property="ivBackgroud" destination="VaB-7W-sYa" id="AoD-1Y-YfY"/>
                         <outlet property="scColorScheme" destination="91L-d3-3i3" id="zSX-Ih-1kw"/>
                         <outlet property="swAutoPlay" destination="Hns-pr-xW1" id="awM-OO-91J"/>
                     </connections>
@@ -658,6 +663,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="alfa.jpg" width="1920" height="1080"/>
         <image name="gradient" width="320" height="66"/>
         <image name="moviePoster" width="326" height="184"/>
         <image name="movies" width="22" height="22"/>

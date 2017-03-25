@@ -56,6 +56,7 @@
 		AC70C4F81E743C94005E598A /* TheaterAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */; };
 		AC70C4FC1E747752005E598A /* fiap.gpx in Resources */ = {isa = PBXBuildFile; fileRef = AC70C4FB1E747752005E598A /* fiap.gpx */; };
 		AC70C4FE1E748175005E598A /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC70C4FD1E748175005E598A /* WebViewController.swift */; };
+		AC80E6271E85F48300337DF8 /* alfa.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC80E6261E85F48300337DF8 /* alfa.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +111,7 @@
 		AC70C4F71E743C94005E598A /* TheaterAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TheaterAnnotation.swift; sourceTree = "<group>"; };
 		AC70C4FB1E747752005E598A /* fiap.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = fiap.gpx; sourceTree = "<group>"; };
 		AC70C4FD1E748175005E598A /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
+		AC80E6261E85F48300337DF8 /* alfa.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alfa.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +128,7 @@
 		07780D401E6D860E00BC3630 = {
 			isa = PBXGroup;
 			children = (
+				AC80E6261E85F48300337DF8 /* alfa.jpg */,
 				AC70C4FB1E747752005E598A /* fiap.gpx */,
 				07780D4B1E6D860E00BC3630 /* MoviesLib */,
 				07780D4A1E6D860E00BC3630 /* Products */,
@@ -318,6 +321,7 @@
 				AC64CEE11E70C98E00FD5EFF /* kongskull-small.jpg in Resources */,
 				07780D521E6D860E00BC3630 /* Main.storyboard in Resources */,
 				AC64CED61E70C98E00FD5EFF /* arrival-wide.jpg in Resources */,
+				AC80E6271E85F48300337DF8 /* alfa.jpg in Resources */,
 				AC64CEE61E70C98E00FD5EFF /* logan-wide.jpg in Resources */,
 				AC64CEEA1E70C98E00FD5EFF /* rogueone-wide.jpg in Resources */,
 				AC66B47F1E8361A000C8D5F9 /* Settings.bundle in Resources */,
